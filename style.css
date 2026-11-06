@@ -641,3 +641,17 @@ a.category-card {
         gap: 15px;
     }
 }
+@media (max-width: 768px) {
+    .hero-content {
+        display: contents;
+    }
+
+    .hero-image {
+        order: 1;
+    }
+
+    .hero-buttons {
+        order: 2;
+    }
+}
+

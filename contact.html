@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | EduPath</title>
+
+    <meta name="description" content="Contact the EduPath team with questions, suggestions or corrections about our educational articles and study resources.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+ <header class="header">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="logo">
+             <div class="logo-title">
+             <i class="fa-solid fa-graduation-cap"></i>
+        
+            <h2>Edu<span>Path</span></h2>
+            </div>
+            <p>Your Learning Partner</p>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="resources.html">Study Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <form class="search-box" action="blog.html" method="get" role="search">
+            <input type="search" name="q" placeholder="Search articles..." aria-label="Search articles">
+            <button type="submit">Search</button>
+        </form>
+
+    </header>
+
+<main class="article-page">
+
+    <h1>Contact Us</h1>
+
+    <p>
+        Have a question, a topic you would like us to write about, or found a
+        mistake in one of our articles? Send us a message using the form below
+        or email us directly. We usually reply within 2–3 working days.
+    </p>
+
+    <p><strong>Email:</strong><a href="mailto:chandazahra0@gmail.com">chandazahra0@gmail.com</a></p>
+
+    <form class="contact-form" action="mailto:chandazahra0@gmail.com" method="post" enctype="text/plain">
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="primary-btn">Send Message</button>
+
+    </form>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h2>Edu<span>Path</span></h2>
+            <p>Original, researched articles and study resources to help students learn better and plan their future.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="resources.html">Study Resources</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Legal</h3>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">© 2026 EduPath. All rights reserved.</p>
+
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

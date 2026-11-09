@@ -159,9 +159,6 @@ textarea:focus-visible {
     color: var(--blue);
 }
 
-.navbar a[aria-current="page"] {
-    border-bottom: 2px solid var(--accent);
-}
 
 .search-box input {
     padding: 10px;
@@ -361,10 +358,6 @@ textarea:focus-visible {
     color: #ffffff;
 }
 
-.filter-buttons button.active {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
 
 .results-count {
     margin-bottom: 15px;

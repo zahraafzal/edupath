@@ -93,8 +93,6 @@ button:focus-visible {
     column-gap: 8px;
     align-items: center;
 }
-
-/* icon and title sit in the grid directly, so the tagline lines up under "EduPath" */
 .logo-title {
     display: contents;
 }

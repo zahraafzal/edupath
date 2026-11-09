@@ -12,7 +12,7 @@ document.querySelectorAll('.search-box input[name="q"]').forEach((input) => {
 });
 
 function showArticles() {
-  if (!cards.length) 
+  if (!cards.length) return;
 
   let found = 0;
   buttons.forEach((button) => {
@@ -83,11 +83,48 @@ document.querySelectorAll(".navbar a").forEach((link) => {
   }
 });
 
-if (params.get("sent") === "1") {
-  const ok = document.getElementById("form-success");
-  if (ok) ok.hidden = false;
+function showFormMessage(form, text, isError) {
+  let box = form.querySelector(".form-message");
+  if (!box) {
+    box = document.createElement("p");
+    box.className = "form-message";
+    box.setAttribute("role", "status");
+    form.insertAdjacentElement("afterend", box);
+  }
+  box.className = isError ? "form-message form-error" : "form-message form-success";
+  box.textContent = text;
 }
-if (params.get("subscribed") === "1") {
-  const form = document.querySelector(".newsletter-form");
-  if (form) form.insertAdjacentHTML("afterend", '<p class="form-success" role="status">Thanks for subscribing!</p>');
-}
+
+document.querySelectorAll(".contact-form, .newsletter-form").forEach((form) => {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const button = form.querySelector('button[type="submit"]');
+    const buttonText = button.textContent;
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    try {
+      const response = await fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      const result = await response.json();
+      if (!response.ok || result.success === "false") throw new Error(result.message);
+
+      form.reset();
+      showFormMessage(
+        form,
+        form.classList.contains("newsletter-form")
+          ? "Thanks for subscribing!"
+          : "Thank you! Your message has been sent. We will reply within 2–3 working days.",
+        false
+      );
+    } catch (error) {
+      showFormMessage(form, "Sorry, something went wrong. Please try again or email us directly.", true);
+    } finally {
+      button.disabled = false;
+      button.textContent = buttonText;
+    }
+  });
+});

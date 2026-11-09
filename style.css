@@ -547,13 +547,27 @@ textarea:focus-visible {
     cursor: pointer;
 }
 
-.form-success {
-    margin: 10px 0 15px;
+.form-message {
+    margin-top: 15px;
     padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.form-success {
     background: #ecfdf5;
     color: #065f46;
     border-left: 4px solid #10b981;
-    border-radius: 8px;
+}
+
+.form-error {
+    background: #fef2f2;
+    color: #991b1b;
+    border-left: 4px solid #ef4444;
+}
+
+.newsletter .form-message {
+    flex-basis: 100%;
+    margin-top: 0;
 }
 
 /* ---------- Newsletter ---------- */

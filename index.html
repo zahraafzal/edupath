@@ -7,7 +7,18 @@
 
     <title>EduPath - Your Learning Partner</title>
 
-    <meta name="description" content="Explore educational articles, study resources and learning tips with EduPath.">
+    <meta name="description" content="EduPath shares original, research-based guides on study skills, scholarships, admissions, exam preparation and career planning, plus free study resources for students.">
+    <link rel="canonical" href="https://zahraafzal.github.io/edupath/">
+    <meta name="theme-color" content="#1E3A8A">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EduPath">
+    <meta property="og:title" content="EduPath - Your Learning Partner">
+    <meta property="og:description" content="EduPath shares original, research-based guides on study skills, scholarships, admissions, exam preparation and career planning, plus free study resources for students.">
+    <meta property="og:url" content="https://zahraafzal.github.io/edupath/">
+    <meta property="og:image" content="https://zahraafzal.github.io/edupath/images/hero-education.svg">
+    <meta property="og:image:alt" content="Graduation cap on a stack of books with a lightbulb and pencils">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -17,10 +28,10 @@
 
    
     <header class="header">
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
         <div class="logo">
              <div class="logo-title">
-             <i class="fa-solid fa-graduation-cap"></i>
+             <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
         
             <h2>Edu<span>Path</span></h2>
             </div>
@@ -29,7 +40,7 @@
            
 
        
-        <nav class="navbar">
+        <nav class="navbar" id="mainNav" aria-label="Main navigation">
 
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -77,8 +88,8 @@
 
     </div>
 
-       <div class="hero-image">
-    <div class="cap">🎓</div>
+       <div class="hero-image" role="img" aria-label="Graduation cap above three books labelled Dream Big, Study Smart and Achieve More">
+    <div class="cap" aria-hidden="true">🎓</div>
     <div class="book book-1">DREAM BIG</div>
     <div class="book book-2">STUDY SMART</div>
     <div class="book book-3">ACHIEVE MORE</div>
@@ -88,32 +99,32 @@
     <div class="category-container">
 
         <a href="blog.html?category=study-skills" class="category-card">
-            <span>📖</span>
+            <span aria-hidden="true">📖</span>
             <h3>Study Skills</h3>
         </a>
 
         <a href="blog.html?category=scholarships" class="category-card">
-            <span>🏆</span>
+            <span aria-hidden="true">🏆</span>
             <h3>Scholarships</h3>
         </a>
 
         <a href="blog.html?category=admissions" class="category-card">
-            <span>🏛️</span>
+            <span aria-hidden="true">🏛️</span>
             <h3>Admissions</h3>
         </a>
 
         <a href="blog.html?category=career-guidance" class="category-card">
-            <span>🧭</span>
+            <span aria-hidden="true">🧭</span>
             <h3>Career Guidance</h3>
         </a>
 
         <a href="blog.html?category=exam-prep" class="category-card">
-            <span>📝</span>
+            <span aria-hidden="true">📝</span>
             <h3>Exam Prep</h3>
         </a>
 
         <a href="resources.html" class="category-card">
-            <span>📂</span>
+            <span aria-hidden="true">📂</span>
             <h3>Study Resources</h3>
         </a>
 
@@ -129,7 +140,7 @@
     <div class="articles-grid">
 
         <a href="blog/how-to-study-effectively.html" class="article-card">
-            <div class="article-image">7</div>
+            <div class="article-image" aria-hidden="true">7</div>
             <div class="article-info">
                 <span class="article-tag">Study Skills</span>
                 <h3>How to Study Effectively: 7 Evidence-Based Techniques</h3>
@@ -139,7 +150,7 @@
         </a>
 
         <a href="blog/how-to-find-and-apply-for-scholarships.html" class="article-card">
-            <div class="article-image">SC</div>
+            <div class="article-image" aria-hidden="true">SC</div>
             <div class="article-info">
                 <span class="article-tag">Scholarships</span>
                 <h3>How to Find and Apply for Scholarships</h3>
@@ -149,7 +160,7 @@
         </a>
 
         <a href="blog/how-to-write-a-statement-of-purpose.html" class="article-card">
-            <div class="article-image">SOP</div>
+            <div class="article-image" aria-hidden="true">SOP</div>
             <div class="article-info">
                 <span class="article-tag">Admissions</span>
                 <h3>How to Write a Strong Statement of Purpose</h3>
@@ -159,7 +170,7 @@
         </a>
 
         <a href="blog/choosing-a-career-after-graduation.html" class="article-card">
-            <div class="article-image">GO</div>
+            <div class="article-image" aria-hidden="true">GO</div>
             <div class="article-info">
                 <span class="article-tag">Career Guidance</span>
                 <h3>Choosing a Career After Graduation</h3>
@@ -169,7 +180,7 @@
         </a>
 
         <a href="blog/how-to-prepare-for-exams.html" class="article-card">
-            <div class="article-image">EX</div>
+            <div class="article-image" aria-hidden="true">EX</div>
             <div class="article-info">
                 <span class="article-tag">Exam Prep</span>
                 <h3>How to Prepare for Exams: A 4-Week Plan</h3>
@@ -181,14 +192,18 @@
     </div>
 
 </section>
-<section class="newsletter">
+<section class="newsletter" id="newsletter">
     <div class="newsletter-text">
         <h2>Join Our Learning Community!</h2>
         <span>Get the latest articles, study tips and resources delivered to your inbox.</span>
     </div>
-    <form class="newsletter-form">
+    <form class="newsletter-form" action="https://formsubmit.co/chandazahra0@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New EduPath newsletter subscriber">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://zahraafzal.github.io/edupath/index.html?subscribed=1#newsletter">
         
-        <input type="email" id="email" placeholder="Enter your email address" required>
+        <label for="newsletter-email" class="sr-only">Email address</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Enter your email address" autocomplete="email" required>
         <button type="submit">Subscribe</button>
     </form>
 </section>

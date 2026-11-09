@@ -7,6 +7,17 @@
     <title>Blog - Study Tips, Scholarships & Career Guides | EduPath</title>
 
     <meta name="description" content="Read EduPath articles on study skills, scholarships, admissions, career guidance and exam preparation.">
+    <link rel="canonical" href="https://zahraafzal.github.io/edupath/blog.html">
+    <meta name="theme-color" content="#1E3A8A">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EduPath">
+    <meta property="og:title" content="Blog - Study Tips, Scholarships & Career Guides | EduPath">
+    <meta property="og:description" content="Read EduPath articles on study skills, scholarships, admissions, career guidance and exam preparation.">
+    <meta property="og:url" content="https://zahraafzal.github.io/edupath/blog.html">
+    <meta property="og:image" content="https://zahraafzal.github.io/edupath/images/hero-education.svg">
+    <meta property="og:image:alt" content="Graduation cap on a stack of books with a lightbulb and pencils">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -15,17 +26,17 @@
 <body>
 
     <header class="header">
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
         <div class="logo">
              <div class="logo-title">
-             <i class="fa-solid fa-graduation-cap"></i>
+             <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
         
             <h2>Edu<span>Path</span></h2>
             </div>
             <p>Your Learning Partner</p>
         </div>
 
-        <nav class="navbar">
+        <nav class="navbar" id="mainNav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="blog.html">Blog</a>
@@ -47,20 +58,21 @@
     </div>
 
     <div class="filter-buttons">
-        <button type="button" data-filter="all">All</button>
-        <button type="button" data-filter="study-skills">Study Skills</button>
-        <button type="button" data-filter="scholarships">Scholarships</button>
-        <button type="button" data-filter="admissions">Admissions</button>
-        <button type="button" data-filter="career-guidance">Career Guidance</button>
-        <button type="button" data-filter="exam-prep">Exam Prep</button>
+        <button type="button" aria-pressed="false" data-filter="all">All</button>
+        <button type="button" aria-pressed="false" data-filter="study-skills">Study Skills</button>
+        <button type="button" aria-pressed="false" data-filter="scholarships">Scholarships</button>
+        <button type="button" aria-pressed="false" data-filter="admissions">Admissions</button>
+        <button type="button" aria-pressed="false" data-filter="career-guidance">Career Guidance</button>
+        <button type="button" aria-pressed="false" data-filter="exam-prep">Exam Prep</button>
     </div>
 
+    <p id="results-count" class="results-count" aria-live="polite"></p>
     <p id="no-results" hidden>No articles found. Try another word or category.</p>
 
     <div class="articles-grid">
 
         <a href="blog/how-to-study-effectively.html" class="article-card" data-category="study-skills">
-            <div class="article-image">7</div>
+            <div class="article-image" aria-hidden="true">7</div>
             <div class="article-info">
                 <span class="article-tag">Study Skills</span>
                 <h3>How to Study Effectively: 7 Evidence-Based Techniques</h3>
@@ -70,7 +82,7 @@
         </a>
 
         <a href="blog/how-to-find-and-apply-for-scholarships.html" class="article-card" data-category="scholarships">
-            <div class="article-image">SC</div>
+            <div class="article-image" aria-hidden="true">SC</div>
             <div class="article-info">
                 <span class="article-tag">Scholarships</span>
                 <h3>How to Find and Apply for Scholarships</h3>
@@ -80,7 +92,7 @@
         </a>
 
         <a href="blog/how-to-write-a-statement-of-purpose.html" class="article-card" data-category="admissions">
-            <div class="article-image">SOP</div>
+            <div class="article-image" aria-hidden="true">SOP</div>
             <div class="article-info">
                 <span class="article-tag">Admissions</span>
                 <h3>How to Write a Strong Statement of Purpose</h3>
@@ -90,7 +102,7 @@
         </a>
 
         <a href="blog/choosing-a-career-after-graduation.html" class="article-card" data-category="career-guidance">
-            <div class="article-image">GO</div>
+            <div class="article-image" aria-hidden="true">GO</div>
             <div class="article-info">
                 <span class="article-tag">Career Guidance</span>
                 <h3>Choosing a Career After Graduation</h3>
@@ -100,12 +112,42 @@
         </a>
 
         <a href="blog/how-to-prepare-for-exams.html" class="article-card" data-category="exam-prep">
-            <div class="article-image">EX</div>
+            <div class="article-image" aria-hidden="true">EX</div>
             <div class="article-info">
                 <span class="article-tag">Exam Prep</span>
                 <h3>How to Prepare for Exams: A 4-Week Plan</h3>
                 <p>A week-by-week plan to revise, practise past papers and stay calm...</p>
                 <div class="article-meta">Nov 4, 2026 · 7 min read</div>
+            </div>
+        </a>
+
+        <a href="blog/time-management-tips-for-students.html" class="article-card" data-category="study-skills">
+            <div class="article-image" aria-hidden="true">TM</div>
+            <div class="article-info">
+                <span class="article-tag">Study Skills</span>
+                <h3>Time Management for Students: 8 Practical Strategies</h3>
+                <p>Plan your week, block your time and beat procrastination with simple habits...</p>
+                <div class="article-meta">Nov 7, 2026 · 7 min read</div>
+            </div>
+        </a>
+
+        <a href="blog/how-to-prepare-for-a-university-interview.html" class="article-card" data-category="admissions">
+            <div class="article-image" aria-hidden="true">INT</div>
+            <div class="article-info">
+                <span class="article-tag">Admissions</span>
+                <h3>How to Prepare for a University Admission Interview</h3>
+                <p>Common questions, the STAR method and tips to answer with confidence...</p>
+                <div class="article-meta">Nov 8, 2026 · 8 min read</div>
+            </div>
+        </a>
+
+        <a href="blog/how-to-write-a-student-cv.html" class="article-card" data-category="career-guidance">
+            <div class="article-image" aria-hidden="true">CV</div>
+            <div class="article-info">
+                <span class="article-tag">Career Guidance</span>
+                <h3>How to Write a Student CV With Little Experience</h3>
+                <p>The right sections and how to show your skills, even without work experience...</p>
+                <div class="article-meta">Nov 9, 2026 · 7 min read</div>
             </div>
         </a>
 

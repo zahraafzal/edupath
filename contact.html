@@ -7,6 +7,17 @@
     <title>Contact Us | EduPath</title>
 
     <meta name="description" content="Contact the EduPath team with questions, suggestions or corrections about our educational articles and study resources.">
+    <link rel="canonical" href="https://zahraafzal.github.io/edupath/contact.html">
+    <meta name="theme-color" content="#1E3A8A">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EduPath">
+    <meta property="og:title" content="Contact Us | EduPath">
+    <meta property="og:description" content="Contact the EduPath team with questions, suggestions or corrections about our educational articles and study resources.">
+    <meta property="og:url" content="https://zahraafzal.github.io/edupath/contact.html">
+    <meta property="og:image" content="https://zahraafzal.github.io/edupath/images/hero-education.svg">
+    <meta property="og:image:alt" content="Graduation cap on a stack of books with a lightbulb and pencils">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -15,17 +26,17 @@
 <body>
 
  <header class="header">
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">☰</button>
         <div class="logo">
              <div class="logo-title">
-             <i class="fa-solid fa-graduation-cap"></i>
+             <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
         
             <h2>Edu<span>Path</span></h2>
             </div>
             <p>Your Learning Partner</p>
         </div>
 
-        <nav class="navbar">
+        <nav class="navbar" id="mainNav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="blog.html">Blog</a>
@@ -50,15 +61,22 @@
         or email us directly. We usually reply within 2–3 working days.
     </p>
 
-    <p><strong>Email:</strong><a href="mailto:chandazahra0@gmail.com">chandazahra0@gmail.com</a></p>
+    <p><strong>Email:</strong> <a href="mailto:chandazahra0@gmail.com">chandazahra0@gmail.com</a></p>
 
-    <form class="contact-form" action="mailto:chandazahra0@gmail.com" method="post" enctype="text/plain">
+    <form class="contact-form" action="https://formsubmit.co/chandazahra0@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from EduPath contact form">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://zahraafzal.github.io/edupath/contact.html?sent=1">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <p id="form-success" class="form-success" hidden>Thank you! Your message has been sent. We will reply within 2–3 working days.</p>
+
 
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" required>
 
         <label for="subject">Subject</label>
         <input type="text" id="subject" name="subject">

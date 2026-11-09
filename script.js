@@ -95,6 +95,15 @@ function showFormMessage(form, text, isError) {
   box.textContent = text;
 }
 
+document.querySelectorAll(".contact-form textarea").forEach((textarea) => {
+  textarea.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
+      e.preventDefault();
+      textarea.form.requestSubmit();
+    }
+  });
+});
+
 document.querySelectorAll(".contact-form, .newsletter-form").forEach((form) => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
